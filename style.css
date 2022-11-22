@@ -474,9 +474,9 @@ background-color: #043873;
 footer area css
 */
 .footer-area {
-    background-color: #043873;
+    background-color:#043873;
     border-top: 1px solid #4F9CF9;
-    padding-top: 140px;
+   padding: 140px 0;
 }
 .footer-top {
    margin-bottom: 60px; 
@@ -512,6 +512,34 @@ footer area css
    font-size: 28px; 
    margin-bottom: 15px;
 }
+.footer-buttom {
+    border-top: 1px solid #4F9CF9;
+    padding: 32px 0;
+}
+.footer-language a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer-language.dropdown-menu a {
+  color: #212529;
+}
+.footer-language {
+    margin-right:10px ;
+}
+.footer-social {
+    text-align: right;
+}
+.footer-social ul {
+    margin: 0;
+    margin-bottom: 15px;
+}
+.footer-social a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    margin-left: 32px;
+}
+
 
 @media (max-width: 991px) {
     .footer-top {
@@ -526,4 +554,22 @@ footer area css
     .footer-contact {
         margin-top: 40px;
     }
+    .footer-buttom {
+        border-top:none;
+    }
+    .footer-language {
+        text-align: center;
+    }
+    .footer-copyright {
+        margin: 25px 0;
+    }
+    .footer-social {
+        text-align: center;
+        border-top: 1px solid #4F9CF9;
+        padding-top: 32px;
+    }
+    .footer-social a {
+        margin: 0 16px ;
+    }
+  
 }
