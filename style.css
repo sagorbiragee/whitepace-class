@@ -52,7 +52,7 @@ body{
     padding: 16px 24px !important;
     text-decoration: none;
 }
-.theme-button img{
+.theme-button i{
     margin-left: 10px;
 }
 .theme-text h3 {
@@ -77,17 +77,7 @@ body{
     z-index: -1;
     background-image: url(img/element.png);
     background-size: cover;
-    background-repeat: no-repeat;
-}
-@media (max-width: 991px){
-    .theme-text{
-        text-align: center;
-    }
-    .theme-text h3 {
-        font-size: 36px;
-    }
-}
-
+    background-repeat: no-repeat;}
 /* 
 Header CSS
 */
@@ -109,41 +99,7 @@ Header CSS
 }
 .header-area .navbar-toggler{
     border: none;
-    box-shadow: none;
-}
-
-@media (max-width: 991px){
-    .theme-button{
-        width: 100%;
-        margin-left: 0px;
-        margin-top: 15px;
-        text-align: center;
-    }
-    .theme-button-two{
-        width: 100%;
-        text-align: center;
-        margin-left: 0px;
-        margin-top: 15px;
-    }
-    .header-area .nav-link{
-        padding: 16px 0 !important;
-    }
-    .header-area .nav-link{
-        position: relative;
-    }
-    .header-area .nav-link::after{
-        position: absolute;
-        right: 28px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .header-area .theme-button{
-        margin-left: 0;
-    }
-    .header-area .theme-button-two{
-        margin-left: 0;
-    }
-}
+    box-shadow: none;}
 
 /* 
 Hero area CSS
@@ -159,22 +115,7 @@ Hero area CSS
     font-size: 52px;
 }
 .hero-area .theme-button{
-    margin-top: 30px;
-}
-@media (max-width: 991px){
-    .hero-area{
-        padding: 80px 0;
-    }
-    .hero-text{
-        text-align: center;
-    }
-    .hero-text h3 {
-        font-size: 36px;
-    }
-    .hero-area .theme-button{
-        margin-bottom: 50px;
-    }
-}
+    margin-top: 30px;}
 
 /* 
 Management area CSS
@@ -186,18 +127,10 @@ Management area CSS
 .work-management{
     margin-top: 100px;
 }
-
-@media (max-width: 991px){
-    .management-area{
-        background-color: #fff;
-        padding: 80px 0;
-    }
-    .work-management{
-        margin-top: 60px;
-    }
-    .management-area .theme-button{
-        margin-bottom: 50px;
-    }
+.work-management .theme-text h3 span::after {
+    background-image: url(img/w-m-element.png);
+    background-size: contain;
+    background-position: bottom;
 }
 
 /* 
@@ -210,18 +143,14 @@ Extansion area CSS
 .extension-area .theme-text h3 {
     color: #fff;
 }
-.extension-area .theme-text p {
-    color: #fff;
+.extension-area .theme-text h3 span::after {
+    background-image: url(img/w-m-element.png);
+    background-size: contain;
+    background-position: bottom;
 }
 
-@media (max-width: 991px){
-    .extension-area .theme-button{
-        margin-bottom: 50px;
-    }
-    .extension-area{
-        padding: 80px 0;
-    }
-}
+.extension-area .theme-text p {
+    color: #fff;}
 
 /* 
 Customise area CSS
@@ -248,6 +177,12 @@ Pricing area CSS
     margin-bottom: 60px;
 }
 
+.pricing-area .theme-text h3 span::after {
+    background-image: url(img/p-element.png);
+    background-size: contain;
+    background-position: bottom;
+}
+
 .single-pricing{
     color: #212529;
     border: 1px solid #FFE492;border-radius: 10px;
@@ -270,11 +205,18 @@ Pricing area CSS
 .single-pricing ul li{
     list-style: none;
     margin-bottom: 28px;
+    display: flex;
 }
 .single-pricing ul li:last-child{
     margin: 0;
 }
-.special-pricing{
+
+.single-pricing img {
+    height: 21px !important;
+    width: 21px !important;
+    margin-right:10px ;
+}
+.special-pricing {
     padding: 80px 40px;
     background-color: #043873;
     color: #fff;
@@ -282,14 +224,23 @@ Pricing area CSS
 .special-pricing h2 {
     color: #FFE492;
 }
-
-@media (max-width: 991px){
-    .pricing-area{
-        padding: 80px 0;
-    }
-    .single-pricing{
-        margin-bottom: 30px;
-    }
+.pricing-area .owl-stage {
+    display: flex;
+    align-items: center;
+}
+.pricing-area .owl-dots {
+    text-align: center;
+}
+.pricing-area .owl-dots button {
+    height: 15px;
+    width: 15px;
+    background-color: #4F9CF9 !important;
+    border-radius: 50%;
+    margin: 10px;
+    
+}
+.pricing-area .owl-dots button.active {
+    background-color: #043873;
 }
 
 /* 
@@ -302,17 +253,16 @@ work area CSS
 .your-work-area .theme-text h3 {
     color: #fff;
 }
+
+.your-work-area .theme-text h3 span::after {
+    background-image: url(img/work-element.png);
+    background-size: contain;
+    background-position: bottom;
+}
 .your-work-area .theme-text p {
     color: #fff;
 }
-@media (max-width: 991px){
-    .your-work-area{
-        padding: 80px 0;
-    }
-    .your-work-area{
-        margin-bottom: 30px;
-    }
-}
+
 /* 
 task area CSS
 */
@@ -321,10 +271,11 @@ task area CSS
     padding: 140px;
     background-color: #fff;
 }
-@media (max-width: 991px){
-    .your-task-area{
-        padding: 80px 0;
-    }
+
+.your-task-area .theme-text h3 span::after {
+    background-image: url(img/data-element.png);
+    background-size: contain;
+    background-position: bottom;
 }
 /* 
 Sponsors area CSS
@@ -337,21 +288,19 @@ Sponsors area CSS
 .sponsors-area .theme-text{
     margin-bottom: 80px;
 }
+
+.sponsors-area .theme-text h3 span::after {
+    background-image: url(img/spon-element.png);
+    background-size: contain;
+    background-position: bottom;
+}
+
 .single-sponsor img{
     height: 55px;
     width: auto;
 }
-@media (max-width: 991px){
-    .sponsors-area{
-        padding-top: 80px 0;
-        padding-bottom: 30px;
-    }
-    .single-sponsor{
-        margin-bottom: 50px;
-    }
-}
-/*
-apps area css
+
+/*apps area css
 */
 .apps-area {
     padding: 140px 0;
@@ -364,19 +313,7 @@ apps area css
     color: #ffffff;
 }
 .apps-area .theme-text p {
-    color: #ffffff;
-}
-
-@media (max-width: 991px){
-.apps-area {
-    padding: 80px 0; 
-    margin-bottom: 50px;   
-} 
-.apps-area .theme-text h3{
-    padding-top: 40px;
-    font-size: 50px;
-}
-}
+    color: #ffffff;}
 
 /*
 start testimonial area css
@@ -385,20 +322,37 @@ start testimonial area css
     padding: 140px 0;
     background-color: #ffffff !important;
 }
+
+.testimonial-area .theme-text h3 span::after {
+    background-image: url(img/text-m-element.png);
+    background-size: contain;
+    background-position: bottom;
+}
 .single-testimonial {
 background: #4F9CF9;
 box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
 border-radius: 10px;
 padding: 60px 40px;
-color: #212529;
+color: #ffffff;
+transition: 0.3s;
+}
+.single-testimonial:hover {
+    background-color: #ffffff;
+    color: #212529;
+    cursor: pointer;
+}
+
+.testimonial-text {
+    border-bottom: 1px solid #fff;
+}
+.single-testimonial i {
+ font-size: 60px;
 }
 .testimonial-text p {
     border-bottom: 1px solid cornflowerblue;
     margin-bottom: 40px;
 }
-.testimonial-text img {
-    margin-bottom:30px;
-}
+
 .author-img {
     margin-right: 25px;
 }
@@ -407,10 +361,7 @@ color: #212529;
     color: #212529;
 }
 .author-text p {
-    margin-bottom: 0;
-    color: #ffffff;
-}
-
+    margin-bottom: 0;}
 
 .testimonial-area .owl-dots {
     text-align: center;
@@ -421,13 +372,10 @@ color: #212529;
     width: 15px;
     background-color: #4F9CF9 !important;
     border-radius: 50%;
-    margin: 5px;
+    margin: 10px;
 }
-
-@media (max-width: 991px){
-.testimonial-area {
-padding:80px 0 ;
-    }
+.testimonial-area .owl-dots button.active {
+    background-color: #043873;
 }
 
 /*
@@ -451,31 +399,14 @@ background-color: #043873;
 }
 .trial-img a {
     margin: 0 20px;
-    text-decoration: none;
-}
-
-@media (max-width: 991px) {
-    .trial-area {
-        padding: 80px 0;
-     }
-     .trial-text h3 {
-        font-size: 35px;
-    }
-    .trial-text p {
-        font-size: 18px;
-    }
-    .trial-img a {
-        margin: 0 ;
-      margin-right: 40px;
-    }
-}
+    text-decoration: none;}
 
 /*
 footer area css
 */
 .footer-area {
     background-color:#043873;
-    border-top: 1px solid #4F9CF9;
+    border-top: 1px solid #2E4E73;
    padding: 140px 0;
 }
 .footer-top {
@@ -513,7 +444,7 @@ footer area css
    margin-bottom: 15px;
 }
 .footer-buttom {
-    border-top: 1px solid #4F9CF9;
+    border-top: 1px solid #2E4E73;
     padding: 32px 0;
 }
 .footer-language a {
@@ -537,39 +468,170 @@ footer area css
     text-decoration: none;
     color: #ffffff;
     display: inline-block;
-    margin-left: 32px;
-}
+    margin-left: 32px;}
 
 
-@media (max-width: 991px) {
+
+/*basic css*/
+@media (max-width: 1399px) {
+    .header-area{
+        font-size: 16; }}
+
+@media (max-width: 1199px) {
+    .header-area{
+        font-size: 14;
+    }
+    .header-area .nav-link {
+        padding: 7px 10px !important;}}
+
+@media (max-width: 991px){
+    .theme-text{
+        text-align: center;
+    }
+    .theme-text h3 {
+        font-size: 36px;
+    }
+    .theme-button{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .theme-button-two{
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    /*hader area css*/
+    .header-area .nav-link{
+        padding: 16px 0 !important;
+    }
+    .header-area .nav-link{
+        position: relative;
+    }
+    .header-area .nav-link::after{
+        position: absolute;
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .header-area .theme-button{
+        margin-left: 0;
+    }
+    .header-area .theme-button-two{
+        margin-left: 0;
+    }
+    /*hero area css*/
+    .hero-area{
+        padding: 80px 0;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .hero-text h3 {
+        font-size: 36px;
+    }
+    .hero-area .theme-button{
+        margin-bottom: 50px;
+    }
+    /* management area css*/
+    .management-area{
+        background-color: #fff;
+        padding: 80px 0;
+    }
+    .work-management{
+        margin-top: 60px;
+    }
+    .management-area .theme-button{
+        margin-bottom: 50px;
+    }
+    /*extension-area css*/
+    .extension-area .theme-button{
+        margin-bottom: 50px;
+    }
+    .extension-area{
+        padding: 80px 0;
+    }
+    /*pricing-area css*/
+    .pricing-area{
+        padding: 80px 0;
+    }
+    .single-pricing{
+        margin-bottom: 30px;
+    }
+    /*ypur work css*/
+    .your-work-area{
+        padding: 80px 0;
+    }
+    .your-work-area{
+        margin-bottom: 30px;
+    }
+    /*your-task-area*/
+    .your-task-area{
+        padding: 80px 0;
+    }
+    /*sponsors-area css*/
+    .sponsors-area{
+        padding-top: 80px 0;
+        padding-bottom: 30px;
+    }
+    .single-sponsor{
+        margin-bottom: 50px;
+    }
+    /*apps-area css*/
+    .apps-area {
+        padding: 80px 0; 
+        margin-bottom: 50px;   
+    } 
+    .apps-area .theme-text h3{
+        padding-top: 40px;
+        font-size: 50px;
+    }
+    /*testimonial-area css*/
+    .testimonial-area {
+        padding:80px 0 ;
+     }
+     /*trial-area css*/
+     .trial-area {
+        padding: 80px 0;
+     }
+     .trial-text h3 {
+        font-size: 35px;
+    }
+    .trial-text p {
+        font-size: 18px;
+    }
+    .trial-img a {
+        margin: 0 ;
+      margin-right: 40px;
+    }
+    /* footer area css*/
     .footer-top {
-     text-align: center;   
-    }
-    .footer-about {
-        margin-bottom: 40px;
-    }
-    .footer-link {
-        margin: 40px 0;
-    }
-    .footer-contact {
-        margin-top: 40px;
-    }
-    .footer-buttom {
-        border-top:none;
-    }
-    .footer-language {
-        text-align: center;
-    }
-    .footer-copyright {
-        margin: 25px 0;
-    }
-    .footer-social {
-        text-align: center;
-        border-top: 1px solid #4F9CF9;
-        padding-top: 32px;
-    }
-    .footer-social a {
-        margin: 0 16px ;
-    }
-  
-}
+        text-align: center;   
+       }
+       .footer-about {
+           margin-bottom: 40px;
+       }
+       .footer-link {
+           margin: 40px 0;
+       }
+       .footer-contact {
+           margin-top: 40px;
+       }
+       .footer-buttom {
+           border-top:none;
+       }
+       .footer-language {
+           text-align: center;
+       }
+       .footer-copyright {
+           margin: 25px 0;
+       }
+       .footer-social {
+           text-align: center;
+           border-top: 1px solid #2E4E73;
+           padding-top: 32px;
+       }
+       .footer-social a {
+           margin: 0 16px ;} }
